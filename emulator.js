@@ -165,7 +165,9 @@ class EmulatorManager {
         const gameContainer = document.getElementById('game-container');
         const gameMount = document.getElementById('game');
         gameContainer.style.display = 'flex';
-        gameMount.classList.remove('gba-alt-active');
+        if (gameMount) {
+            gameMount.classList.remove('gba-alt-active');
+        }
 
         // Fully reset the mount so re-loading a ROM gives a clean instance
         gameMount.innerHTML = '';
